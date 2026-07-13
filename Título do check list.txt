@@ -1,0 +1,26 @@
+Título do check-list
+
+[] Atividade 1 		{}
+	[] Sub-atividade
+[] Atividade 2 		{}	
+	() Opção A
+	() Opção B
+## Lorem ipsum ##
+[] **URGENTE** Atividade 3 
+<> Atividade X
+
+---
+LEGENDA:
+[]  - Check box
+()  - Múltipla escolha
+{}  - Prioridade (0 - 9)
+##  - Anotações
+**  - Atenção (conteúdo sempre em caixa alta)
+<>  - Tarefa não está clara, preciso definir mais (talvez falar com mais alguém)
+
+Status
+x 		- Concluído 
+/ 		- Em andamento
+/null (vazio) 	- Para fazer
+
+

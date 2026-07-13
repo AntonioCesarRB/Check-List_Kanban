@@ -1,0 +1,182 @@
+.taskContainer {
+  list-style: none;
+  margin-bottom: 12px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.subItemsContainer {
+  margin-left: 12px;
+  padding-left: 16px;
+  border-left: 2px solid #ecf0f1; /* Cria uma linha vertical de conexão */
+  margin-top: 8px;
+}
+
+.annotation {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 4px;
+  padding-left: 36px; /* Alinha com o texto, pulando o botão */
+}
+
+.mainLine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statusButton {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: 1px solid #95a5a6;
+  border-radius: 4px;
+  background: white;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Os 3 estados do botão */
+.vazio { color: transparent; }
+.andamento { color: #f39c12; border-color: #f39c12; }
+.concluido { color: #27ae60; border-color: #27ae60; }
+
+.title {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+/* Modificadores de texto */
+.urgent {
+  font-weight: bold;
+  color: #c0392b;
+}
+
+.priorityBadge {
+  background: #34495e;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* --- NOVAS CLASSES PARA AÇÕES E FORMULÁRIO --- */
+
+.actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0.4; /* Fica sutil por padrão */
+  transition: opacity 0.2s ease;
+}
+
+/* Quando o mouse passa na tarefa, os botões ficam 100% visíveis */
+.taskContainer:hover > .mainLine > .actions {
+  opacity: 1;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.actionButton:hover {
+  background: #ecf0f1;
+}
+
+.subtaskForm {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  margin-left: 36px; /* Alinha com o texto principal */
+}
+
+.subtaskInput {
+  flex-grow: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.subtaskSubmit {
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+.subtaskCancel {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+.deadlineBadge {
+  background: #fdfefe;
+  color: #e67e22;
+  border: 1px solid #e67e22;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --- ESTILOS DAS TAGS --- */
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap; /* Se houver muitas tags, elas pulam para a linha de baixo */
+  gap: 6px;
+  margin-top: 4px;
+  margin-left: 36px; /* Alinha perfeitamente com o título, pulando o botão de status */
+  margin-bottom: 4px;
+}
+
+.tagBadge {
+  background: #e8f4fd; /* Azul muito claro */
+  color: #2980b9; /* Azul escuro */
+  border: 1px solid #bce0fd;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: lowercase; /* Padroniza o visual das tags */
+}
+
+/* --- ESTILO DA ALÇA DE ARRASTAR (DRAG HANDLE) --- */
+
+.dragHandle {
+  background: none;
+  border: none;
+  color: #bdc3c7;
+  cursor: grab; /* Indica visualmente que o item pode ser agarrado */
+  font-size: 1rem;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.dragHandle:active {
+  cursor: grabbing; /* Muda o ícone do mouse durante o movimento */
+  color: #7f8c8d;
+}

@@ -1,0 +1,159 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  color: #2c3e50; /* NOVA LINHA: Força o texto base do modal a ser escuro */
+  padding: 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* Atualize esta regra para incluir o select e a cor de fundo */
+.inputGroup input,
+.inputGroup select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white; 
+  color: #2c3e50; /* NOVA LINHA: Força o texto digitado a ser escuro */
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.inputGroup input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btnSave {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btnCancel {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deadlineGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 0;
+}
+
+.deadlineGroup legend {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #34495e;
+  padding: 0 4px;
+}
+
+.deadlineGroup select,
+.deadlineGroup input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white;
+  color: #2c3e50; /* NOVA LINHA: Força o texto de datas a ser escuro */
+}
+
+/* --- ESTILOS DO NOVO UX DE PRAZOS --- */
+
+.relativeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.numberInput {
+  width: 70px;
+  text-align: center;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #34495e;
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  margin: 0;
+  cursor: pointer;
+}
+
+.btnToggleText {
+  background: none;
+  border: none;
+  color: #2980b9;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-align: left;
+  padding: 4px 0;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.btnToggleText.dangerText {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.helperText {
+  font-size: 0.75rem;
+  color: #7f8c8d;
+  margin-top: -4px; /* Aproxima um pouco do input */
+}
