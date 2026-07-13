@@ -1,7 +1,8 @@
 {
   "name": "organizador-pessoal",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Organizador pessoal — checklist com subtarefas, prioridades e prazos",
   "type": "module",
   "scripts": {
     "dev": "vite",
